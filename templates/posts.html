@@ -3,6 +3,10 @@
 {% block content %}
   <main class="container">
     <div class="row">
+        <form action="{% url 'posts' %}" method="get">
+            {{ filter.form.as_p }}
+            <button type="submit">Saralash</button>
+        </form>
       <div class="col-md-8">
         {% for post in posts %}
         <article class="card mb-3">
